@@ -18,17 +18,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angrbrd/friend-finder.git"
+    "url": "git+https://github.com/Nakanz/FriendFinder"
   },
   "keywords": [
     "friend-finder",
     "friend-match",
     "compatibility"
   ],
-  "author": "Anna D Derbakova",
+  "author": "Nakana Hester",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/angrbrd/friend-finder/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/angrbrd/friend-finder#readme"
+  "homepage": "https://github.com/"
 }
