@@ -55,9 +55,9 @@
 							<select id="question1">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -68,9 +68,9 @@
 							<select id="question2">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -81,9 +81,9 @@
 							<select id="question3">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -94,9 +94,9 @@
 							<select id="question4">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -107,9 +107,9 @@
 							<select id="question5">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -120,9 +120,9 @@
 							<select id="question6">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -133,9 +133,9 @@
 							<select id="question7">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -146,9 +146,9 @@
 							<select id="question8">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -159,9 +159,9 @@
 							<select id="question9">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -172,9 +172,9 @@
 							<select id="question10">
 								<option value="" disabled selected>Choose your option</option>
 								<option value="1">1 (Strongly Disagree)</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
+								<option value="2">2 (Disagree)</option>
+								<option value="3">3 (Neutral)</option>
+								<option value="4">4 (Agree)</option>
 								<option value="5">5 (Strongly Agree)</option>
 							</select>
 						</div>
@@ -201,6 +201,7 @@
 		</div>
 		<div class="modal-footer">
 			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+			<a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Back</a>
 		</div>
 	</div>
 
@@ -236,11 +237,10 @@
 					$('#question10').val().trim()
 				]
 			};
-			// console.log('userInput = ' + JSON.stringify(userInput));
+
 			// Add user inputs to friends list
 			$.post('/api/friends', userInput)
       		.done(function(data) {
-      			// console.log('response = ' + JSON.stringify(data));
       			// Set the name and image values of friend match
       			$('#userMatch').html(data.matchName);
 		    	$("#userMatchImage").attr("src", data.matchImage);
